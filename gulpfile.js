@@ -1,3 +1,5 @@
+require("babel/register");
+
 var gulp       = require("gulp");
 var istanbul   = require("gulp-istanbul");
 var mocha      = require("gulp-mocha");
@@ -10,11 +12,13 @@ var buffer     = require("vinyl-buffer");
 var jscs       = require("gulp-jscs");
 var coveralls  = require("gulp-coveralls");
 var rename     = require("gulp-rename");
+
 var bsync      = require("browser-sync");
 var karma      = require("karma").server;
 var options    = require("yargs").argv;
 
 var pkg = require("./package");
+
 
 /**
  */
